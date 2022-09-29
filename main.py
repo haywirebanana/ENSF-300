@@ -1,3 +1,23 @@
+def checkint(integer):
+    valid = ['-','0','1','2','3','4','5','6','7','8','9']
+    while (0==0):
+        y=0
+        for i in integer:
+            if i in valid:
+                y = 1
+                if i == '-' and len(i) < 2:
+                    y = 0
+                    integer = input("Invalid input, Please enter an integer number: ")
+                continue
+            else:
+                y=0
+                integer = input("Invalid input, Please enter an integer number: ")
+                break        
+        if y == 1:
+            break    
+    return int(integer)
+
+
 def main():
 
     first_num = input('Enter first integer: ')
